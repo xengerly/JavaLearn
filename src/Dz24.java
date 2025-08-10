@@ -3,8 +3,7 @@ public class Dz24 {
         int size = 10;
         int[][] numbers = new int[size][size];
 
-
-
+        multiplicationTableFrom0To20();
     }
 
     public static void multiplicationTableFrom0To9() {
@@ -70,7 +69,7 @@ public class Dz24 {
         int[][] charArray = {{10, 23, 4}, {12, 2, 9}, {1, 4, 2}};
         for (int i = 0; i < 1; i++) {
             for (int j = 0; j < 3; j++) {
-                System.out.println(charArray[i][j]);
+                System.out.print(charArray[i][j] + " ");
             }
         }
     }
