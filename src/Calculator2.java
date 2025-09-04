@@ -66,7 +66,6 @@ public class Calculator2 {
                     }else {
                         System.out.println("Вы ввели некоректный оператор");
                     }
-
                 }
             }
 
