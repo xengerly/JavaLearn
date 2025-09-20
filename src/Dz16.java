@@ -2,7 +2,7 @@ import java.util.Scanner;
 
 public class Dz16 {
     public static void main(String[] args) {
-
+        number3And4();
 
     }
 

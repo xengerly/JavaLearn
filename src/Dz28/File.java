@@ -1,6 +1,6 @@
 package Dz28;
 
-public class File {
+public class File  {
     String size;
     String name;
 
@@ -13,6 +13,4 @@ public class File {
     File(String size){
         this.size = size;
     }
-
-
 }

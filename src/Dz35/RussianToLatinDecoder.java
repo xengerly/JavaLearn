@@ -6,6 +6,7 @@ public class RussianToLatinDecoder implements Decoder {
         RussianToLatinDecoder russianToLatinDecoder = new RussianToLatinDecoder();
 
         System.out.println(russianToLatinDecoder.decode("dhgfdsfd"));
+        System.out.println(russianToLatinDecoder.encode("э"));
 
     }
 
