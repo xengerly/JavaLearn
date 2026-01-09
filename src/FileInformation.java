@@ -1,15 +1,27 @@
 public class FileInformation {
-    String inputFile;
-    String absolutPath;
-    long size;
+    private String inputFile;
+    private String absolutPath;
+    private long size;
 
 
-    FileInformation(String inputFile, String inputAbsolutPath, long inputSize) {
+    public FileInformation(String inputFile, String absolutPath, long size) {
         this.inputFile = inputFile;
-        this.absolutPath = inputAbsolutPath;
-        this.size = inputSize;
-        System.out.println(this.inputFile);
-        System.out.println(this.absolutPath);
-        System.out.println(this.size);
+        this.absolutPath = absolutPath;
+        this.size = size;
+    }
+
+    public String toString() {
+        return inputFile + " " + absolutPath + " " + size;
+    }
+
+    @Override
+    public boolean equals(Object obj) {
+        if (obj instanceof  FileInformation){
+            FileInformation information = (FileInformation) obj;
+            boolean result = this.inputFile.equals(information.inputFile);
+            return result;
+        }else {
+            return false;
+        }
     }
 }

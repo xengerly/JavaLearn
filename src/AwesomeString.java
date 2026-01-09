@@ -3,16 +3,18 @@ import java.util.Scanner;
 public class AwesomeString {
     String name;
     String str;
-    Scanner scanner = new Scanner(System.in);
+    Scanner scanner;
 
 
     AwesomeString(){
-        System.out.println("Default AwesomeString() constructor works. Please specify input :");
+        this.scanner = new Scanner(System.in);
+        System.out.println("Default AwesomeString constructor works. Please specify input: ");
         this.str = scanner.nextLine();
     }
+
     AwesomeString(String inputStr){
         this.str = inputStr;
-        this.scanner = new Scanner(System.in);
+        this.scanner =  new Scanner(System.in);
     }
 
     AwesomeString(int num){
@@ -20,9 +22,9 @@ public class AwesomeString {
         this.scanner = new Scanner(System.in);
     }
 
-    void readString(){
-        System.out.print(this.name + " input: " );
+
+    void  readString(){
+        System.out.println(this.name + " input : ");
         this.str = this.scanner.nextLine();
     }
-
 }

@@ -9,7 +9,7 @@ public class Dz11 {
 
     public static void main(String[] args) throws IOException {
 
-        number4();
+        number6();
 
 
     }

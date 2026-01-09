@@ -1,11 +1,10 @@
 package Dz28;
 
-public class Admin extends Moderator{
-    int ageAdmin;
+public class Admin extends User {
+    String nameAdministrator;
 
-    Admin(String userName,String email,String nameModerator,int ageAdmin){
-        super(userName,email,nameModerator);
-        this.ageAdmin = ageAdmin;
+    public Admin(String userName, String gmail, String nameAdministrator) {
+        super(userName, gmail);
+        this.nameAdministrator = nameAdministrator;
     }
-
 }

@@ -2,7 +2,7 @@ import java.util.Scanner;
 
 public class Dz21 {
     public static void main(String[] args) {
-
+        findTheWordWrittenWithFence();
 
     }
 

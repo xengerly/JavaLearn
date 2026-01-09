@@ -7,6 +7,7 @@ public class RussianToLatinDecoder implements Decoder {
 
         System.out.println(russianToLatinDecoder.decode("dhgfdsfd"));
         System.out.println(russianToLatinDecoder.encode("э"));
+        System.out.println(russianToLatinDecoder.decodeMorse("SOS"));
 
     }
 
@@ -91,6 +92,44 @@ public class RussianToLatinDecoder implements Decoder {
                 case 'm' -> builder.append('ь');
 
                 default -> builder.append('*');
+            }
+        }
+        return builder.toString();
+    }
+
+    @Override
+    public String decodeMorse(String encoded) {
+        StringBuilder builder = new StringBuilder();
+        char[] sourceString = encoded.toCharArray();
+
+        for (int i = 0; i < sourceString.length; i++) {
+            switch (sourceString[i]) {
+                case 'A' -> builder.append(".-");
+                case 'B' -> builder.append("-...");
+                case 'C' -> builder.append("-.-.");
+                case 'D' -> builder.append("-..");
+                case 'E' -> builder.append(".");
+                case 'F' -> builder.append("..-.");
+                case 'G' -> builder.append("--.");
+                case 'H' -> builder.append("....");
+                case 'I' -> builder.append("..");
+                case 'J' -> builder.append(".---");
+                case 'K' -> builder.append("-.-");
+                case 'L' -> builder.append(".-..");
+                case 'M' -> builder.append("--");
+                case 'N' -> builder.append("-.");
+                case 'O' -> builder.append("---");
+                case 'P' -> builder.append(".--.");
+                case 'Q' -> builder.append("--.-");
+                case 'R' -> builder.append(".-.");
+                case 'S' -> builder.append("...");
+                case 'T' -> builder.append("-");
+                case 'U' -> builder.append("..-");
+                case 'V' -> builder.append("...-");
+                case 'W' -> builder.append(".--");
+                case 'X' -> builder.append("-..-");
+                case 'Y' -> builder.append("-.--");
+                case 'Z' -> builder.append("--..");
             }
         }
         return builder.toString();

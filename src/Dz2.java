@@ -108,7 +108,7 @@ public class Dz2 {
 
 
         // Задание 14
-        String java = "Яблако";
+        String java = "Яблоко";
         String java2 = java.replaceAll("а", "@");
         String java3 = java.replaceAll("o", "0");
 

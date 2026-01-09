@@ -16,21 +16,23 @@ public class Dz16 {
     }
 
     public static void number3And4() {
-        Scanner scanner = new Scanner(System.in);
         int counter = 0;
-        char[] vowels = {'а', 'у', 'о', 'ы', 'э', 'я', 'ю', 'ё', 'и', 'е',
-                'А', 'У', 'О', 'Ы', 'Э', 'Я', 'Ю', 'Ё', 'И', 'Е'};
-        String word = scanner.nextLine();
-        char[] charArray = word.toCharArray();
+        String words ="Программа";
+        char letter = ' ';
 
-        for (char c : charArray) {
-            for (char vowel : vowels) {
-                if (c == vowel) {
+        char[] chars = {'а', 'е', 'ё', 'и', 'о', 'у', 'ы', 'э', 'ю', 'я'};
+        char[] array = words.toCharArray();
+
+        for (char aChar : chars) {
+            for (char c : array) {
+                if (aChar == c){
+                    letter = aChar;
                     counter++;
                 }
             }
         }
-        System.out.println(counter);
+        System.out.println("first vowel "+letter);
+        System.out.println("quantity "+counter);
 
     }
 

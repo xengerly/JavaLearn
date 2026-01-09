@@ -6,12 +6,12 @@ public class StandardFile {
     File inputFile;
     String filaName;
 
-    StandardFile(File input){
+    StandardFile(File input) {
         this.inputFile = input;
         this.filaName = input.getName();
     }
 
-    String getInfo(){
+    String getInfo() {
         return this.filaName + ":" + this.inputFile;
     }
 

@@ -52,9 +52,4 @@ public class Dz14 {
             System.out.println(words[i]);
         }
     }
-
-    public static void number4(){
-
-    }
-
 }

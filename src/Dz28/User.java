@@ -2,12 +2,10 @@ package Dz28;
 
 public class User {
     String userName;
-    String email;
+    String gmail;
 
-    User(String userName, String email){
+    public User(String userName, String gmail) {
         this.userName = userName;
-        this.email = email;
-        System.out.println("Создан User: " + userName);
+        this.gmail = gmail;
     }
-
 }

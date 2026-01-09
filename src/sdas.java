@@ -18,22 +18,21 @@ public class sdas {
 //        int result5 = asd(637);
 //         System.out.println(result5);
 
-        ArrayList<String> array =new ArrayList<>();
+        ArrayList<String> array = new ArrayList<>();
         Scanner scanner = new Scanner(System.in);
         int count = 0;
-        while (count != 10){
+        while (count != 10) {
             count++;
-            System.out.println("Введите строку №" +count);
+            System.out.println("Введите строку №" + count);
             String line = scanner.nextLine();
             array.add(
                     line
             );
 
 
-            if (line.contains("!") ){
+            if (line.contains("!")) {
                 System.err.println(line);
             }
-
 
 
         }
@@ -44,16 +43,14 @@ public class sdas {
         for (String string : array) {
             int size = string.length();
 
-            if (size < max){
+            if (size < max) {
                 System.out.println(string);
-            }else {
-                String ob = string.substring(0,max);
+            } else {
+                String ob = string.substring(0, max);
                 System.err.println(ob);
             }
 
         }
-
-
 
 
     }

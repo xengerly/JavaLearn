@@ -3,15 +3,10 @@ package Dz28;
 public class Dz28 {
     public static void main(String[] args) {
 
-        Directory directory = new Directory("Строка",10);
-        Directory directory1 = new Directory(10);
-
-
-        User user = new User("Ivan","xengerly@gmail.com");
-        Moderator moderator = new Moderator("Ivan","name@gmail.com","Alex");
-        Admin admin = new Admin("Ivan","blabbla","Джон",24);
-
-
-
+        File file = new File("Курица", 38,400);
+        file.print();
+        System.out.println();
+        Moderator moderator = new Moderator("xengerly","xengerly@gmail.com","DiabloZ","FULL");
+        moderator.print();
     }
 }

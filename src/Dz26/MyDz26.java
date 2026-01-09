@@ -2,12 +2,6 @@ package Dz26;
 
 public class MyDz26 {
     public static void main(String[] args) {
-        File file = new File();
-        file.name = "Никита";
-        file.age = "17";
-        file.city = "Москва";
-        file.printInfo();
-
         System.out.println();
 
         Admin admin = new Admin();
@@ -49,6 +43,8 @@ public class MyDz26 {
         friendMainCharacter.characterGrowth = "184";
         friendMainCharacter.nameBestFriend = "Alon";
         friendMainCharacter.printCharacter();
+
+
 
     }
 }

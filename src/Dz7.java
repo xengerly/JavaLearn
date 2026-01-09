@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-public class Dz7 {
+public class  Dz7 {
     private static final Scanner scanner = new Scanner(System.in);
     public static void main(String[] args) {
 

@@ -2,7 +2,7 @@ import java.util.Scanner;
 
 public class Dz20 {
     public static void main(String[] args) {
-        deleteSpace();
+        insertSentencesBetweenWords();
 
     }
 
@@ -50,9 +50,10 @@ public class Dz20 {
         StringBuilder builder = new StringBuilder();
         String userWord = scanner.nextLine();
 
+        builder.insert(0, " И что ?");
+        builder.insert(0,userWord);
         builder.insert(0, "Вы говорите ");
-        builder.append(userWord);
-        builder.insert(35, " И что ?");
+
 
         String str = builder.toString();
         System.out.println(str);

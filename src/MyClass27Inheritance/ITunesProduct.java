@@ -6,12 +6,10 @@ public class ITunesProduct {
     String collectionName;
     String releaseDate;
 
+
     void printIntroducePreview(){
         System.out.println(this.artistName + "-" + this.collectionName);
         System.out.println("url to preview " + this. previewUrl);
     }
 
-    void printReleaseDate(){
-        System.out.println(collectionName + "has released " + releaseDate);
-    }
 }

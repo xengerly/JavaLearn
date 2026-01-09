@@ -1,11 +1,13 @@
-public class LimitedAwesomeString extends AwesomeString {
-    int limit;
+public class LimitedAwesomeString extends AwesomeString  {
 
-    LimitedAwesomeString(int inputLimit) {
+    int limit;
+    LimitedAwesomeString(int inputLimit){
+        super(5);
         this.limit = inputLimit;
     }
 
-    LimitedAwesomeString(String inputString, int inputLimit) {
+    LimitedAwesomeString(String inputString , int inputLimit){
+        super(inputString);
         this.limit = inputLimit;
     }
 }

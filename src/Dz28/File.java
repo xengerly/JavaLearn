@@ -1,16 +1,18 @@
 package Dz28;
 
-public class File  {
-    String size;
-    String name;
+public class File extends Directory  {
+        int price;
 
 
-    File(String name,String size){
-        this.name = name;
-        this.size = size;
+    public File(String productName, int idProduct, int price) {
+        super(productName, idProduct);
+        this.price = price;
     }
 
-    File(String size){
-        this.size = size;
+    void print(){
+        System.out.println("Название продуката : " + productName);
+        System.out.println("Номер товара : " + idProduct);
+        System.out.println("Цена за продукт : " + price );
     }
+
 }

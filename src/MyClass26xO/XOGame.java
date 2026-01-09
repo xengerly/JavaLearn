@@ -3,10 +3,11 @@ package MyClass26xO;
 import java.util.Scanner;
 
 public class XOGame {
-    FieldXO gameField;
     Scanner scanner = new Scanner(System.in);
+    FieldXO gameField;
     char whoMakeNextTurn;
     boolean gameOver = false;
+
 
     void setupNewGame() {
         System.out.println("Will play new XO game");
@@ -14,15 +15,15 @@ public class XOGame {
         this.gameField.initField();
     }
 
+
     void play() {
         this.setupNewGame();
-        System.out.print("Who will make first turn : ");
+        System.out.println("Who will make first  turn :");
         char first = this.scanner.next().charAt(0);
-
-        if (first == 'X' || first == 'O'){
+        if (first == 'X' || first == '0') {
             this.whoMakeNextTurn = first;
-        }else {
-            System.out.println("I recognizing only X and O (zero). So first will be X");
+        } else {
+            System.out.println("I recognizing only X and 0 (zero). So first will be X");
             this.whoMakeNextTurn = 'X';
         }
 
@@ -30,31 +31,31 @@ public class XOGame {
             turn();
             this.gameOver = this.gameField.isGameOver(this.whoMakeNextTurn);
             if (this.gameOver){
-                System.out.println(this.whoMakeNextTurn + "win!");
+                System.out.println(this.whoMakeNextTurn + " win!");
             }
             if (this.whoMakeNextTurn == 'X'){
-                this.whoMakeNextTurn = 'O';
+                this.whoMakeNextTurn = '0';
             }else {
                 this.whoMakeNextTurn = 'X';
             }
         }
-        System.out.println("Game Over.");
+        System.out.println("Game over. ");
     }
 
-    void turn(){
-        System.out.println(this.whoMakeNextTurn + ", your turn.  ");
+    void turn() {
+        System.out.println(this.whoMakeNextTurn + ", your turn. ");
         System.out.println("Chose row: ");
         int rowNumber = this.scanner.nextInt();
         System.out.println("Chose column: ");
-        int colNUmber = this.scanner.nextInt();
+        int colNumber = this.scanner.nextInt();
         int rowIndex = rowNumber - 1;
-        int colIndex = colNUmber - 1;
+        int colIndex = colNumber - 1;
 
-        if (this.gameField.isPlaceFree(rowIndex,colIndex)){
-            this.gameField.setValue(rowIndex,colIndex,whoMakeNextTurn);
-            this.gameField.printerField();
-        }else {
-            System.out.println("Wrond number(maybe this plase is not free?). Make turn again");
+        if (this.gameField.isPlaceFree(rowIndex, colIndex)) {
+            this.gameField.setValue(rowIndex, colIndex, whoMakeNextTurn);
+            this.gameField.printField();
+        } else {
+            System.out.println("Wrong number (maybe this place is not free ?). Make turn again");
             turn();
         }
     }

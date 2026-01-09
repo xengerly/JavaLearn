@@ -10,16 +10,16 @@ public class MyClass27 {
         song.collectionName = "Best of MJ";
         song.printIntroducePreview();
         song.releaseDate = "2020";
-        song.printReleaseDate();
+
 
         ITunesMovie movie = new ITunesMovie();
         movie.shortDescription = "the best movie ever";
         movie.artistName = "Brad Pitt";
         movie.previewUrl = "http://itunes.com/bradpitt.mp4";
         movie.collectionName = "Best of BP";
-        movie.printIntroducePreview();
         song.releaseDate = "2022";
-        movie.printReleaseDate();
+        movie.printIntroducePreview();
+
         
     }
 }

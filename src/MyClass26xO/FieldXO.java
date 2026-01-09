@@ -13,11 +13,11 @@ public class FieldXO {
             }
         }
         System.out.println("Field initialized");
-        this.printerField();
+        this.printField();
     }
 
-    void printerField() {
-        System.out.print("  ");
+    void printField() {
+        System.out.println("   ");
         for (int i = 1; i <= size; i++) {
             System.out.print(i + "  ");
         }
@@ -30,7 +30,6 @@ public class FieldXO {
             }
             System.out.println();
         }
-
     }
 
     boolean isPlaceFree(int rowIndex, int colIndex) {
@@ -49,39 +48,39 @@ public class FieldXO {
 
     boolean isGameOver(char player) {
         for (int row = 0; row < this.size; row++) {
-            for (int col = 0; col <= this.size; col++) {
-                if (checkRightDirection(row, col, player)) {
+            for (int col = 0; col < this.size; col++) {
+                if (checkCellRightDirection(row, col, player)) {
                     return true;
-                } else if (checkDownDirection(row, col, player)) {
+                } else if (checkCellDownDirection(row, col, player)) {
                     return true;
                 } else if (checkRightDiagonal(row, col, player)) {
                     return true;
-                } else if (checkLeftDiagonal(row, col, player)) {
-                    return true;
+                }else if (checkLeftDiagonal(row,col,player)){
+                    return false;
                 }
             }
         }
         return false;
     }
 
-    boolean checkRightDirection(int row, int col, char player) {
-        if (col < this.size - this.countToWin) {
+    boolean checkCellRightDirection(int row, int col, char player) {
+        if (col > this.size - this.countToWin) {
             return false;
         }
         for (int i = col; i < col + this.countToWin; i++) {
             if (this.field[row][i] != player) {
-                return false;
+                return true;
             }
         }
         return true;
     }
 
-    boolean checkDownDirection(int row, int col, char player) {
+    boolean checkCellDownDirection(int row, int col, char player) {
         if (row > this.size - this.countToWin) {
             return false;
         }
         for (int i = row; i < row + this.countToWin; i++) {
-            if (this.field[row][col] != player) {
+            if (this.field[i][col] != player) {
                 return false;
             }
         }
@@ -92,23 +91,35 @@ public class FieldXO {
         if (row > this.size - this.countToWin) {
             return false;
         }
-        for (int i = col; i < row + this.countToWin; i++) {
-            if (this.field[row][col] != player){
+        if (col > this.size - this.countToWin) {
+            return false;
+        }
+        for (int sdvig = 0; sdvig < this.countToWin; sdvig++) {
+            int rowToCheck = row + sdvig;
+            int colToCheck = col + sdvig;
+            if (this.field[rowToCheck][colToCheck] != player){
                 return false;
             }
         }
         return true;
     }
-    boolean checkLeftDiagonal(int row, int col,char player){
-        if (row > this.size - this.countToWin){
+
+    boolean checkLeftDiagonal(int row, int col, char player) {
+        if (row >= this.size - this.countToWin) {
             return false;
         }
-        for (int i = col; i < row + this.countToWin; i++) {
-            if (this.field[row][col] !=player){
+        if (col < this.countToWin - 1) {
+            return false;
+        }
+        for (int sdvig = 0; sdvig < this.countToWin; sdvig++) {
+            int rowToCheck = row + sdvig;
+            int colToCheck = col - sdvig;
+            if (this.field[rowToCheck][colToCheck] != player){
                 return false;
             }
         }
         return true;
     }
 }
+
 

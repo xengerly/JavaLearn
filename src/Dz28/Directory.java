@@ -1,19 +1,11 @@
 package Dz28;
 
-public class Directory extends File {
-    int limit;
-    String string;
+public class Directory  {
+        String productName;
+        int idProduct;
 
-    Directory(int inputLimit){
-        super(String.valueOf(inputLimit));
-        this.limit = inputLimit;
+    public Directory(String productName, int idProduct) {
+        this.productName = productName;
+        this.idProduct = idProduct;
     }
-
-    Directory(String inputString,int inputLimit){
-        super(inputString);
-        this.limit = inputLimit;
-        this.string = inputString;
-        System.out.println(string + " " + limit);
-    }
-    
 }
